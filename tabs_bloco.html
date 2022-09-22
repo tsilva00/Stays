@@ -1,0 +1,165 @@
+<style>
+    #tabs {
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+        justify-content: center !important;
+        margin: auto;
+    }
+
+    #tabs p {
+    margin: 0 0 10px;
+    font-size: 16px !important;
+		color: {{cor-text}} !important;
+    }
+
+    .nav>li>a:hover,
+    .nav>li>a:focus {
+        text-decoration: none;
+        background-color: transparent;
+        color:  {{cor-tabs}};
+		font-weight: bold;
+    }
+
+    div#tabs > div > div.col-lg-3.col-md-3.col-xs-12 > nav > ul > li.active > a {
+        color:  {{cor-tabs}};
+		font-weight: bold;
+    }
+
+    div>div>div.col-lg-3>nav>ul>li.active>a>span {
+        display: inline-block;
+    }
+
+    #tab-tab {
+        text-align: justify;
+    }
+
+    .nav>li>a {
+        /*text-align: center;*/
+        font-size: 18px;
+    }
+
+    .dotactive {
+        height: 8px !important;
+        width: 8px;
+        vertical-align: middle;
+        margin-right: 10px;
+        display: none;
+		background-color: {{cor-tabs}} !important;
+        border-radius: 50px;
+    }
+
+    #tabs h2 {
+        font-size: 18px;
+        margin-bottom: .7cm;
+		margin-top: 12px;
+    }
+
+   div#tabs > div > div.col-lg-3 > nav > ul > li> a {
+	   color: {{cor-link}};
+        }
+
+    @media (max-width: 768px) {
+        div#tabs > div > div.col-lg-3 > nav > ul > li.active {
+        background:  {{cor-tabs}} !important;
+}
+        div#tabs > div > div.col-lg-3 > nav > ul > li.active > a {
+            color: white !important;
+        }
+
+		div#tabs > div > div.col-lg-3 > nav > ul > li> a {
+			color: {{cor-link}} ;
+			text-align: center;
+	}
+
+		    .dotactive {
+        height: 8px !important;
+        width: 8px;
+        vertical-align: middle;
+        margin-right: 10px;
+        display: none;
+		background-color: white !important;
+        border-radius: 50px;
+    }
+		#tabs p {
+    margin: 0 0 10px;
+    font-size: 16px !important;
+    color: #0000ff !important;
+    padding: 0px 30px;
+}
+    }
+</style>
+    <div class="container" id="tabs">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-xs-12">
+                <nav class="nav-sidebar">
+                    <ul class="nav tabs">
+                        <li class="active"><a href="#tab1" data-toggle="tab"><span class="dotactive"></span>{{tittle-tab1}}</a></li>
+                        {{#tab2}}<li class=""><a href="#tab2" data-toggle="tab"><span class="dotactive"></span>{{tittle-tab2}}</a></li>{{/tab2}}
+                        {{#tab3}}<li class=""><a href="#tab3" data-toggle="tab"><span class="dotactive"></span>{{tittle-tab3}}</a></li>{{/tab3}}
+                        {{#tab4}}<li class=""><a href="#tab4" data-toggle="tab"><span class="dotactive"></span>{{tittle-tab4}}</a></li>{{/tab4}}
+                        {{#tab5}}<li class=""><a href="#tab5" data-toggle="tab"><span class="dotactive"></span>{{tittle-tab5}}</a></li>{{/tab5}}
+                        {{#tab6}}<li class=""><a href="#tab6" data-toggle="tab"><span class="dotactive"></span>{{tittle-tab6}}</a></li>{{/tab6}}
+                    </ul>
+                </nav>
+            </div>
+            <!-- tab content -->
+            <div class="col-lg-9 col-md-9 col-xs-12">
+                <div class="tab-content" id="tab-tab">
+                    <div class="tab-pane active text-style" id="tab1">
+                        <p>
+							{{#pok_ms}}text-tab1{{/pok_ms}}
+                        </p>
+						{{#img01}}
+                        <img src="/media/{{img01}}/lg" class="img-rounded pull-right">
+						{{/img01}}
+                    </div>
+					{{#tab2}}
+                    <div class="tab-pane text-style" id="tab2">
+                        <p>
+							{{#pok_ms}}text-tab2{{/pok_ms}}
+						</p>
+						{{#img02}}
+                        <img src="/media/{{img02}}/lg" class="img-rounded pull-left">
+						{{/img02}}
+                    </div>
+					{{/tab2}}
+					{{#tab3}}
+                    <div class="tab-pane text-style" id="tab3">
+                        <p>
+							{{#pok_ms}}text-tab3{{/pok_ms}}
+						</p>
+						{{#img03}}
+						<img src="/media/{{img03}}/lg" class="img-rounded pull-left">{{/img03}}
+                    </div>
+					{{/tab3}}
+					{{#tab4}}
+                    <div class="tab-pane text-style" id="tab4">
+                        <p>
+							{{#pok_ms}}text-tab4{{/pok_ms}}
+						</p>
+						{{#img04}}
+						<img src="/media/{{img04}}/lg" class="img-rounded pull-left">{{/img04}}
+                   </div>
+					{{/tab4}}
+					{{#tab5}}
+                    <div class="tab-pane text-style" id="tab5">
+                        <p>
+							{{#pok_ms}}text-tab5{{/pok_ms}}
+						</p>
+						{{#img05}}
+						<img src="/media/{{img05}}/lg" class="img-rounded pull-left">{{/img05}}
+                    </div>
+					{{/tab5}}
+					{{#tab6}}
+                    <div class="tab-pane text-style" id="tab6">
+                        <p>
+							{{#pok_ms}}text-tab6{{/pok_ms}}
+						</p>
+						{{#img06}}
+						<img src="/media/{{img06}}/lg" class="img-rounded pull-left">{{/img06}}
+                    </div>
+					{{/tab6}}
+                </div>
+            </div>
+        </div>
+    </div>
