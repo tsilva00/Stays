@@ -1,0 +1,118 @@
+<style>
+  #{{uniq}} {
+    padding-top:{{margin-top}}px;
+    padding-bottom:{{margin-bottom}}px;
+    background: {{#corfundo}}{{corfundo}}{{/corfundo}}{{^corfundo}}transparent{{/corfundo}};
+  }
+
+	.cont1, .cont2 {
+    height: 50%;
+}
+
+	.cont1 h1, .cont2 h1 {
+    text-align: center;
+    vertical-align: initial;
+    margin-top: -52px;
+}
+
+	.col-lg-8.col-md-8.col-xs-12 h1 {
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    margin: auto;
+    display: block;
+    margin-top: 31%;
+}
+
+	.col-lg-8.col-md-8.col-xs-12, .col-lg-4.col-md-4.col-xs-12 {
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    border-radius: 9px;
+    max-height: 69vh;
+}
+
+	img {
+		width: 100%;
+		padding: 5px;
+		height: 100%;
+		border-radius: 14px;
+	}
+
+	h1 {
+		text-align: center;
+		color: {{cor-title}};
+	}
+	.container {
+		margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+	}
+
+	@media (max-width: 776px) {
+.col-lg-8.col-md-8.col-xs-12 {
+    min-height: 206px!important;
+    margin: 0px 20px;
+    margin-bottom: 6px !important;
+    margin-top: 6px;
+}
+	}
+</style>
+
+<div id="{{uniq}}">
+  <div class="container">
+	 {{#templates=="t1"}}
+    <div class="row m-0">
+			<div class="col-lg-8 col-md-8 col-xs-12" style="background-image: url(/media/{{img1}}/lg); background-size: contain;">
+				<a href="{{link1}}">
+					<div>
+					<h1 class="grid-title" style="font-size: 24px;">{{grid-title1}}</h1>
+					</div>
+				</a>
+			</div>
+		<div class="col-lg-4 col-md-4 col-xs-12">
+			<div class="cont1">
+				<a href="{{link2}}">
+					<img src="/media/{{img2}}/lg">
+					<h1 class="grid-title" style="font-size: 24px;">{{grid-title2}}</h1>
+				</a>
+			</div>
+			<div class="cont2">
+				<a href="{{link3}}">
+					<img src="/media/{{img3}}/lg">
+					<h1 class="grid-title" style="font-size: 24px;">{{grid-title3}}</h1>
+				</a>
+			</div>
+		</div>
+	</div>
+	  {{/templates}}
+	  {{#templates=="t2"}}
+	 <div class="row m-0">
+		<div class="col-lg-4 col-md-4 col-xs-12">
+			<div class="cont1">
+				<a href="{{link2}}">
+					<img src="/media/{{img2}}/lg">
+					<h1 class="grid-title" style="font-size: 24px;">{{grid-title2}}</h1>
+				</a>
+			</div>
+			<div class="cont2">
+				<a href="{{link3}}">
+					<img src="/media/{{img3}}/lg">
+					<h1 class="grid-title" style="font-size: 24px;">{{grid-title3}}</h1>
+				</a>
+			</div>
+		</div>
+		<div class="col-lg-8 col-md-8 col-xs-12" style="background-image: url(/media/{{img1}}/lg); background-size: contain;">
+				<a href="{{link1}}">
+					<div>
+					<h1 class="grid-title" style="font-size: 24px;">{{grid-title1}}</h1>
+					</div>
+				</a>
+			</div>
+	</div>
+	 {{/templates}}
+	</div>
+</div>
